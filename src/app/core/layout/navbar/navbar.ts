@@ -38,4 +38,5 @@ export class Navbar {
   toggleUserMenu() {
     this.isUserMenuOpen = !this.isUserMenuOpen;
   }
+  
 }

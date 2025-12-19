@@ -267,7 +267,84 @@
 .logout {
   color: #fca5a5;
 }
+.option:hover {
+  background: transparent;
+  columns: #000000;
+}
+.glass-pill-dropdown {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 9999px;
+  padding: 6px 12px;
+  position: relative;
+  cursor: pointer;
+
+  .options {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(255, 255, 255, 0.15); // semi-transparent
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    margin-top: 4px;
+    list-style: none;
+    padding: 4px 0;
+    z-index: 999;
+
+    li {
+      padding: 8px 12px;
+      cursor: pointer;
+      &:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}
 
 
+.user-dropdown {
+  position: relative;
+  z-index: 10000; // higher than activity cards
+
+  .dropdown-dialog {
+    position: absolute;
+    top: 48px;      // below the pill
+    right: 0;
+    min-width: 160px;
+    padding: 12px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.16), rgba(255,255,255,0.06));
+    backdrop-filter: blur(18px) saturate(180%);
+    border: 1px solid rgba(255,255,255,0.22);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+    display: flex;
+    flex-direction: column;
+    z-index: 10001; // ensure above everything else
+
+    button {
+      background: transparent;
+      border: none;
+      color: #eef2ff;
+      padding: 8px;
+      text-align: left;
+      border-radius: 6px;
+      cursor: pointer;
+
+      &:hover:not(:disabled) {
+        background: rgba(255,255,255,0.12);
+      }
+
+      &.logout {
+        color: #fca5a5;
+      }
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      margin: 6px 0;
+    }
+  }
+}
 
 

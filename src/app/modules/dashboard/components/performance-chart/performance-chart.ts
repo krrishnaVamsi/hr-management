@@ -91,7 +91,7 @@ export class PerformanceChart implements OnInit, AfterViewInit {
                 datasets: [
                   {
                     data: emp.ratings,
-                    backgroundColor: 'rgba(109, 142, 101, 0.7)',
+                    backgroundColor: 'rgba(49, 191, 13, 0.89)',
                     hoverBackgroundColor: 'rgba(147, 197, 253, 0.9)',
                   },
                 ],
@@ -101,7 +101,7 @@ export class PerformanceChart implements OnInit, AfterViewInit {
                 plugins: { legend: { display: false } },
                 scales: {
                   x: {
-                    ticks: { color: '#e5edff' },
+                    ticks: { color: '#edf0f7ff' },
                     grid: { display: false },
                   },
                   y: {
