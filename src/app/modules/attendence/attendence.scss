@@ -91,7 +91,7 @@ th {
   height: 36px;
   padding: 0 12px 20;
   border-radius: 8px;
-  border: 1px solid #d1d5db;
+  border: 1px solid #feffff;
   background: transparent;
   font-size: 14px;
   transition: border-color 0.2s ease, background 0.2s ease;
@@ -100,5 +100,5 @@ th {
 .search-box input:focus {
   outline: none;
   border-color: #4f46e5;
-  background: transparent;
+  background: white;
 }
