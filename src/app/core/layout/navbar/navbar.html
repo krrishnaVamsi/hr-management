@@ -1,0 +1,26 @@
+<header class="navbar">
+  <div class="left">
+    <button class="menu-btn" (click)="onMenuClick()">☰</button>
+
+    <div class="search-box">
+      <input
+        type="text"
+        placeholder="Search employees..."
+        (input)="onSearch($event)"
+        (keydown.enter)="onSearch($event)"
+      />
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="actions">
+      <span class="glass-icon-btn" (click)="toggleNotifications()">🔔</span>
+    </div>
+  </div>
+</header>
+
+<!-- Notification Dialog -->
+<app-notification-dialog
+  *ngIf="showNotifications"
+  (close)="toggleNotifications()"
+></app-notification-dialog>

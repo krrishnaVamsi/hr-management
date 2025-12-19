@@ -1,0 +1,18 @@
+<!-- Dashboard Line Chart -->
+<div *ngIf="!showEmployeeCards" class="chart-card .glass-card">
+  <h3>{{ title }}</h3>
+  <div class="chart-wrapper">
+    <canvas id="performanceChart"></canvas>
+  </div>
+</div>
+
+<!-- Employee Mini Chart Cards -->
+<div *ngIf="showEmployeeCards" class="employee-cards">
+  <div class="card" *ngFor="let emp of employeePerformance">
+    <h4>{{ emp.name }}</h4>
+    <p>Overall Rating: {{ emp.averageRating }}</p>
+    <div class="chart-wrapper">
+      <canvas id="chart-{{emp.id}}"></canvas>
+    </div>
+  </div>
+</div>

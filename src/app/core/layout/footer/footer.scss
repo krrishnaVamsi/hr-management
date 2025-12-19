@@ -1,0 +1,16 @@
+.footer {
+  height: 48px;
+  background: transparent;
+  border-top: 1px solid rgba(255,255,255,0.18); // 👈 softer for glass
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  font-size: 12px;
+  color: #ffffff;
+  backdrop-filter: blur(6px); // optional glass touch
+}
+
+.footer .right {
+  font-weight: 500;
+}

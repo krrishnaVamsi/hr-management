@@ -1,0 +1,14 @@
+<div class="stats-grid">
+ 
+    <div class="card .glass-card" *ngFor="let stat of stats">
+         <p class="label">{{ stat.label }}</p>
+         <h2>{{ stat.value }}</h2>
+         @if(stat.trend.includes('+')) {
+         <p class="trend" style="color:green" *ngIf="stat.trend">▲ {{ stat.trend }}</p>
+         }
+         @else {
+         <p class="trend" style="color:red" *ngIf="stat.trend"> ▼ {{ stat.trend }}</p>
+         }
+    </div>
+ 
+</div>

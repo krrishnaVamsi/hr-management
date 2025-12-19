@@ -1,0 +1,13 @@
+<div class="card">
+  <h4>Recent Activity</h4>
+  <ul class="activity-list">
+  <li class="activity-item" *ngFor="let activity of activities">
+     <strong>{{ activity.type|titlecase}}</strong>
+    <strong>{{ activity.text }}</strong>
+    <span>{{ activity.time }}</span>
+  </li>
+</ul>
+</div>
+
+
+

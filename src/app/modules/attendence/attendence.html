@@ -1,0 +1,39 @@
+<div class="page-header">
+  <h2>Attendance</h2>
+<div class="search-box">
+ <input
+    type="text"
+    placeholder="Attendance search..."
+    (input)="onSearch($any($event.target).value)"
+  />
+</div>
+
+
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Employee</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th>Check In</th>
+        <th>Check Out</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of attendanceList">
+        <td>{{ item.name }}</td>
+        <td>{{ item.date }}</td>
+        <td>
+          <span class="status" [class.present]="item.status === 'Present'"
+                               [class.absent]="item.status === 'Absent'">
+            {{ item.status }}
+          </span>
+        </td>
+        <td>{{ item.checkIn }}</td>
+        <td>{{ item.checkOut }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

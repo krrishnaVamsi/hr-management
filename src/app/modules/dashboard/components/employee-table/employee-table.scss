@@ -1,0 +1,77 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+
+  color: #f1f5ff;
+}
+
+
+thead {
+  background: transparent;
+border-bottom: 1px solid rgb(150, 149, 149);
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+tbody tr:hover {
+  background: #f5f6fa;
+}
+
+th {
+  font-weight: 600;
+}
+.table-wrapper {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employee-table th,
+.employee-table td {
+  padding: 12px;
+  text-align: left;
+}
+
+.employee-table tbody tr:hover {
+  color: var(--text-on-bg);
+  background: linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 40%, var(--bg-3) 100%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.search-box input {
+  width: 240px;
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  font-size: 14px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  background: #ffffff;
+}

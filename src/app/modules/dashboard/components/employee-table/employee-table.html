@@ -1,0 +1,22 @@
+
+<table class="employee-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Role</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let emp of filteredEmployees">
+      <td>{{ emp.name }}</td>
+      <td>{{ emp.role }}</td>
+      <td>{{ emp.status }}</td>
+    </tr>
+
+    <tr *ngIf="filteredEmployees.length === 0">
+      <td colspan="3">No employees found</td>
+    </tr>
+  </tbody>
+</table>

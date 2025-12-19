@@ -1,0 +1,27 @@
+<aside class="sidebar" [class.collapsed]="collapsed">
+  <div class="sidebar-header">
+    <span class="logo" (click)="onMenuClick()" (keydown)="onMenuClick()" tabindex="0" role="button">HR</span>
+    <span class="title" *ngIf="!collapsed" (click)="onMenuClick()">Manager</span>
+  </div>
+
+  <nav class="nav">
+    <a class="nav-item" routerLink="/dashboard" routerLinkActive="active">
+      <span class="icon">📊</span>
+      <span class="text" *ngIf="!collapsed">Dashboard</span>
+    </a>
+    <a class="nav-item" routerLink="/performance" routerLinkActive="active">
+      <span class="icon">🚀</span>
+      <span class="text" *ngIf="!collapsed">Performance</span>
+    </a>
+
+    <a class="nav-item" routerLink="/employees" routerLinkActive="active">
+      <span class="icon">👥</span>
+      <span class="text" *ngIf="!collapsed">Employees</span>
+    </a>
+
+    <a class="nav-item" routerLink="/attendance" routerLinkActive="active">
+      <span class="icon">📅</span>
+      <span class="text" *ngIf="!collapsed">attendance</span>
+    </a>
+  </nav>
+</aside>

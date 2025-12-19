@@ -1,0 +1,273 @@
+.navbar {
+  height: 64px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* LEFT */
+.left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.menu-btn {
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.menu-btn:hover {
+  background: transparent;
+}
+
+.search-box input {
+  height: 36px;
+  width: 240px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: transparent;
+  font-size: 14px;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  background: transparent;
+}
+
+/* RIGHT */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: #4f46e5;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.user:hover {
+  background: transparent;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  background: #4f46e5;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.name {
+  font-size: 14px;
+}
+
+.caret {
+  font-size: 12px;
+  color: white;
+}
+.search-box {
+  position: relative;
+  background: transparent;
+}
+
+.search-box input {
+  width: 240px;
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: transparent;
+  font-size: 14px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  color: #050505;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  background: #ffffff;
+}
+.glass-icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* glass effect */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0.06)
+  );
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+
+  color: #eef2ff;
+  font-size: 16px;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Hover */
+.glass-icon-btn:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.1)
+  );
+}
+
+/* Active click */
+.glass-icon-btn:active {
+  transform: scale(0.96);
+}
+
+/* Remove default button styles */
+.glass-icon-btn {
+  outline: none;
+}
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Glass pill */
+.glass-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0.08)
+  );
+  backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #eef2ff;
+}
+
+.glass-pill:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+}
+
+.username {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.caret {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+/* Dropdown */
+/* Full-page overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 9998; /* slightly lower than dialog */
+}
+
+/* Glass dropdown dialog */
+.dropdown-dialog {
+  position: fixed;
+  top: 64px;   /* adjust for navbar height */
+  right: 24px; /* align with glass pill */
+  min-width: 160px;
+  padding: 12px;
+  border-radius: 12px;
+  z-index: 9999;
+
+  background: linear-gradient(135deg, rgba(255,255,255,0.16), rgba(255,255,255,0.06));
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border: 1px solid rgba(255,255,255,0.22);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-dialog button {
+  background: transparent;
+  border: none;
+  color: #eef2ff;
+  padding: 8px;
+  text-align: left;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dropdown-dialog button:hover:not(:disabled) {
+  background: rgba(255,255,255,0.12);
+}
+
+.dropdown-dialog button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.dropdown-dialog hr {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin: 6px 0;
+}
+
+.logout {
+  color: #fca5a5;
+}
+
+
+
+
