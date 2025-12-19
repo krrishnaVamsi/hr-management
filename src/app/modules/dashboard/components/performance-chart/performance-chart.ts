@@ -14,15 +14,14 @@ import { CommonModule } from '@angular/common';
 export class PerformanceChart implements OnInit, AfterViewInit {
   @Input() title: string = 'Performance Overview';
 
-  // Dashboard mode
+
   @Input() labels: string[] = [];
   @Input() values: number[] = [];
 
-  // Employee mode
   employeePerformance: any[] = [];
   showEmployeeCards = false;
 
-  constructor(private mockData: MockData, private router: Router) {}
+  constructor(private readonly mockData: MockData, private readonly router: Router) {}
 
   ngOnInit(): void {
     const url = this.router.url;
@@ -79,7 +78,6 @@ export class PerformanceChart implements OnInit, AfterViewInit {
         },
       });
     } else if (this.showEmployeeCards) {
-      // Render mini charts after view init for each employee
       setTimeout(() => {
         this.employeePerformance.forEach((emp) => {
           const ctx = document.getElementById(`chart-${emp.id}`) as HTMLCanvasElement;

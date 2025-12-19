@@ -283,7 +283,7 @@
     position: absolute;
     top: 100%;
     right: 0;
-    background: rgba(255, 255, 255, 0.15); // semi-transparent
+    background: rgba(255, 255, 255, 0.15); 
     backdrop-filter: blur(10px);
     border-radius: 8px;
     margin-top: 4px;
@@ -304,11 +304,11 @@
 
 .user-dropdown {
   position: relative;
-  z-index: 10000; // higher than activity cards
+  z-index: 10000; 
 
   .dropdown-dialog {
     position: absolute;
-    top: 48px;      // below the pill
+    top: 48px;      
     right: 0;
     min-width: 160px;
     padding: 12px;
@@ -319,7 +319,7 @@
     box-shadow: 0 20px 40px rgba(0,0,0,0.45);
     display: flex;
     flex-direction: column;
-    z-index: 10001; // ensure above everything else
+    z-index: 10001; 
 
     button {
       background: transparent;

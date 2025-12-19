@@ -26,7 +26,6 @@ export class EmployeeTable implements OnInit {
       );
     });
   }
-  // employee-table.component.ts
 onSearch(event: Event) {
   const value = (event.target as HTMLInputElement).value;
   this.mockData.updateSearch(value);

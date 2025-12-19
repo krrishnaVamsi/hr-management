@@ -78,7 +78,6 @@ export class MockData {
       checkOut: '06:05 PM',
     },
   ];
-  // For Dashboard summary
 getQuarterlyPerformance() {
   return [
     { quarter: 'Q1', averageRating: 4.2 },
@@ -88,7 +87,6 @@ getQuarterlyPerformance() {
   ];
 }
 
-// For Employee Performance page
 getEmployeePerformance() {
   return [
     { id: 1, name: 'John Doe', averageRating: 4.5, ratings: [4,4.5,5,4.5] },
